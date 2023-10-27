@@ -11,7 +11,7 @@
         return markupString;
     }
 
-    public string returnsCarouselHtml(CarouselList CarouselList)
+    public string returnsCarouselHtml(List<IBaseCarousel> CarouselList)
     {
         string html = "";
         //Comienzo carrusel
@@ -19,7 +19,7 @@
     <div class='carousel-inner'>";
         bool firstRound = true;
         string activeItem = "";
-        foreach (var carouselItem in CarouselList.CarouselItems)
+        foreach (var carouselItem in CarouselList)
         {
             if(firstRound = true)
             {
@@ -67,11 +67,9 @@
         return html;
     }
 
-    CarouselList createsNewCarouselList()
+    List<IBaseCarousel> createsNewCarouselList()
     {
-        return new CarouselList()
-        {
-            CarouselItems = new List<IBaseCarousel>()
+        return new List<IBaseCarousel>()
             {
                new CarouselItem()
                {
@@ -95,7 +93,6 @@
                     Title = "Este es un titulo"
                 }
                }
-            }
         };
     }
 

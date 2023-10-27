@@ -4,7 +4,9 @@
 
 <div class="page">
    
-
+    @{
+        var objectView = "";
+    }
     <main>
         <div>
             <NavMenu />
@@ -18,11 +20,8 @@
         <div>
             <Articles />
         </div>
-        
        
-        <article class="content px-4">
-            @Body
-        </article>
+        
         <div>
             <EndPage />
         </div>
