@@ -1,0 +1,58 @@
+{
+  "ItemMenuList": {
+    "Title": "Sample Title",
+    "Items": [
+      {
+        "Title": "Item Title 1",
+        "ImageSource": "sample_image.jpg"
+      },
+      {
+        "Title": "Item Title 2",
+        "ImageSource": "sample_image.jpg"
+      }
+    ],
+    "ImageSource": "sample_image.jpg"
+  },
+  "ArticleList": [
+    {
+      "Title": "Article Title 1",
+      "Quote": "Sample Quote",
+      "Description": "Sample Description",
+      "ImageSource": "sample_image.jpg"
+    },
+    {
+      "Title": "Article Title 2",
+      "Quote": "Sample Quote",
+      "Description": "Sample Description",
+      "ImageSource": "sample_image.jpg"
+    }
+  ],
+  "CarouselItemList": [
+    {
+      "ImageSource": "sample_image.jpg",
+      "BaseItem": {
+        "Iitle": "Item Title",
+        "ImageSource": "sample_image.jpg"
+      }
+    },
+    {
+      "ImageSource": "sample_image.jpg",
+      "BaseItem": {
+        "Title": "Item Title",
+        "ImageSource": "sample_image.jpg"
+      }
+    }
+  ],
+  "LogoAndUrlList": [
+    {
+      "Url": "https://www.sampleurl.com",
+      "ImageSource": "sample_image.jpg",
+      "TextDescription": "Sample Description"
+    },
+    {
+      "Url": "https://www.sampleurl.com",
+      "ImageSource": "sample_image.jpg",
+      "TextDescription": "Sample Description"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
-﻿@using BasicBlazorApp1.Infraestructure.Implementation;
-@using BlazorPracticeBasic.Core.Domain.Aplication.Interfaces;
-@using BlazorPracticeBasic.Infraestructure.Implementation;
+﻿@using BlazorApp4.NewFolder.Interface;
+@using BlazorApp4.NewFolder.Implementation;
+    using BlazorApp4.NewFolder.Interface;
 @createMarkupString(returnsCarouselHtml(createsNewCarouselList()))
 
     
@@ -11,7 +11,7 @@
         return markupString;
     }
 
-    public string returnsCarouselHtml(List<IBaseCarousel> CarouselList)
+    public string returnsCarouselHtml(List<CarouselItem> CarouselList)
     {
         string html = "";
         //Comienzo carrusel
@@ -67,9 +67,9 @@
         return html;
     }
 
-    List<IBaseCarousel> createsNewCarouselList()
+    List<CarouselItem> createsNewCarouselList()
     {
-        return new List<IBaseCarousel>()
+        return new List<CarouselItem>()
             {
                new CarouselItem()
                {

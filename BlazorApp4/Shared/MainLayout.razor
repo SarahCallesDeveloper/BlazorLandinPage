@@ -1,13 +1,27 @@
-﻿@inherits LayoutComponentBase
+﻿@using System.Text.Json;
+@using System.IO;
+@using BlazorApp4.NewFolder.Implementation;
+@using BlazorApp4.NewFolder.JsonObject;
+@using BlazorApp4.NewFolder.Interface;
+@using Newtonsoft.Json;
+@inherits LayoutComponentBase
 
 <PageTitle>BlazorApp4</PageTitle>
 
 <div class="page">
    
     @{
-        var objectView = "";
+        string jsonString = File.ReadAllText(@"./wwwroot/pview.json");
+
+        var JsonViewPageObject = JsonConvert.DeserializeObject<JsonViewPage>(jsonString);
+        string asdasd = "";
     }
     <main>
+        <div>
+            <h1>
+                este es el titulo de ItemMenuList: @JsonViewPageObject.ItemMenuList.Title
+            </h1>
+        </div>
         <div>
             <NavMenu />
         </div>
@@ -28,3 +42,5 @@
         
     </main>
 </div>
+
+

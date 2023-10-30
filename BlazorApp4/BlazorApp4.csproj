@@ -7,8 +7,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="pview.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="wwwroot\pview.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Data\Entities\" />
-    <Folder Include="NewFolder\Domain\DTOs\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
   </ItemGroup>
 
 </Project>

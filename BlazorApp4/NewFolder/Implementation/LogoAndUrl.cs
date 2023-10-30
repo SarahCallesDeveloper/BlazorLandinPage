@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlazorPracticeBasic.Infraestructure.Implementation
+namespace BlazorApp4.NewFolder.Implementation
 {
     public class LogoAndUrl
     {

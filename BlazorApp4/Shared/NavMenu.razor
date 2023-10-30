@@ -1,5 +1,6 @@
-﻿@using BasicBlazorApp1.Core.Domain.Aplication.Interfaces;
-@using BasicBlazorApp1.Infraestructure.Implementation;
+﻿@using BlazorApp4.NewFolder.Implementation;
+@using BlazorApp4.NewFolder.Interface;
+    using BlazorApp4.NewFolder.Interface;
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container-fluid">
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -34,7 +35,7 @@
         return title;
     }
 
-    public string ReturnsHtml(IBaseItem item, bool firstMenu)
+    public string ReturnsHtml(ItemBase item, bool firstMenu)
     {
         string colorLetras;
 
@@ -125,7 +126,7 @@
     {
         return new ItemMenuList()
             {
-                Items = new List<IBaseItem>() {
+                Items = new List<ItemBase>() {
             new ItemTitle() {
                     Title = "PrimeraVuelta", ImageSource = "asdasd"
                 },
@@ -140,7 +141,7 @@
                 },
 
                 new ItemMenuList() {
-                    Title = "Menu Desplegable", Items = new List < IBaseItem > () {
+                    Title = "Menu Desplegable", Items = new List < ItemBase > () {
                         new ItemUrl() {
                                 Title = "urlMenu", Url = "https://www.instagram.com/?hl=es"
                             },
@@ -149,7 +150,7 @@
                             },
 
                             new ItemMenuList() {
-                                Title = "Titulo", Items = new List < IBaseItem > ()
+                                Title = "Titulo", Items = new List < ItemBase > ()
 
                                 {
                                     new ItemTitle() {
