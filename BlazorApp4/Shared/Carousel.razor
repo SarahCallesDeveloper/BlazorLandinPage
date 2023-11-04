@@ -1,18 +1,57 @@
-﻿@using BlazorApp4.NewFolder.Interface;
+﻿
 @using BlazorApp4.NewFolder.Implementation;
-    using BlazorApp4.NewFolder.Interface;
-@createMarkupString(returnsCarouselHtml(createsNewCarouselList()))
+
+
+<div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="2000">
+            <img src="/images/imagen1.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+                <h5>Texto encima de la imagen 1</h5>
+                <p>Más texto de descripción si es necesario.</p>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="/images/imagen2.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+                <h5>Texto encima de la imagen 2</h5>
+                <p>Más texto de descripción si es necesario.</p>
+            </div>
+        </div>
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="/images/imagen3.jpg" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+                <h5>Texto encima de la imagen 3</h5>
+                <p>Más texto de descripción si es necesario.</p>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
 
     
 @code {
+    /*[Parameter]
+    public List<CarouselItem> CarouselList { get; set; }
+
+
+    @createMarkupString(returnsCarouselHtml(CarouselList))
+
     MarkupString createMarkupString(string html)
-    {
+        {
         MarkupString markupString = new MarkupString(html);
         return markupString;
     }
 
     public string returnsCarouselHtml(List<CarouselItem> CarouselList)
-    {
+        {
         string html = "";
         //Comienzo carrusel
         html += $@"<div id='carouselExampleInterval' class='carousel slide' data-bs-ride='carousel'>
@@ -20,9 +59,9 @@
         bool firstRound = true;
         string activeItem = "";
         foreach (var carouselItem in CarouselList)
-        {
-            if(firstRound = true)
             {
+            if(firstRound = true)
+                {
                 activeItem = " active";
             }
             else{}
@@ -30,23 +69,23 @@
             html += $@"<div class='carousel-item{activeItem}' data-bs-interval='2000'>
     <img src={carouselItem.ImageSource} class='d-block w-100' alt='...'>";
             if (carouselItem.BaseItem != null)
-            {
-                switch (carouselItem.BaseItem)
                 {
+                switch (carouselItem.BaseItem)
+                    {
                     case ItemTitle itemTitle:
                         html += $@"<div class='carousel-caption {activeItem}'>
     <h5>{itemTitle.Title} 1</h5></div>";
-                        break;
+                    break;
                     case ItemDescription itemDescription:
                         html += $@"<div class='carousel-caption {activeItem}'>
     <h5>{itemDescription.Title}</h5>
     <p>{itemDescription.Description}</p>
-</div>";
-                        break;
-                    default:
-                        break;
+                        </div>";
+                    break;
+                        default:
+                break;
 
-                }
+            }
             }
             else { }
             //final
@@ -64,42 +103,42 @@
         <span class='visually-hidden'>Next</span>
         </button>
         </div>";
-        return html;
+    return html;
     }
 
     List<CarouselItem> createsNewCarouselList()
-    {
+        {
         return new List<CarouselItem>()
-            {
-               new CarouselItem()
                {
+               new CarouselItem()
+                   {
                    ImageSource = "/images/imagen1.jpg",
                    BaseItem = new ItemTitle() {
                     Title = "Este es un titulo"
-                }
+               }
                },
                new CarouselItem()
-               {
+                   {
                    ImageSource = "/images/imagen2.jpg",
                    BaseItem = new ItemDescription() {
                     Title = "Este es un titulo",
                     Description = "Esta es la descripcion"
-                }
+               }
                },
                new CarouselItem()
-               {
+                   {
                    ImageSource = "/images/imagen3.jpg",
                    BaseItem = new ItemTitle() {
                     Title = "Este es un titulo"
-                }
                }
-        };
+        }
+    };
     }
 
     ItemDescription itemExample = new ItemDescription()
-        {
+            {
             Title = "DADA",
             Description = "asdasd"
-        };
+    };*/
 
 }

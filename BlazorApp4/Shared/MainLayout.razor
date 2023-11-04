@@ -2,43 +2,53 @@
 @using System.IO;
 @using BlazorApp4.NewFolder.Implementation;
 @using BlazorApp4.NewFolder.JsonObject;
-@using BlazorApp4.NewFolder.Interface;
 @using Newtonsoft.Json;
+@using Microsoft.AspNetCore.Components
 @inherits LayoutComponentBase
 
 <PageTitle>BlazorApp4</PageTitle>
 
+
 <div class="page">
    
     @{
+        /*string listaLogosExample = File.ReadAllText(@"./wwwroot/ExampleLogoAndUrlList.json"); ;
         string jsonString = File.ReadAllText(@"./wwwroot/pview.json");
 
-        var JsonViewPageObject = JsonConvert.DeserializeObject<JsonViewPage>(jsonString);
-        string asdasd = "";
+        var settings = new JsonSerializerSettings();
+        settings.Converters.Add(new ItemBaseConverter());
+        settings.NullValueHandling = NullValueHandling.Ignore;
+
+        var JsonViewPageObject = JsonConvert.DeserializeObject<JsonViewPage>(jsonString, settings);
+        var JsonlistaLogosExampleObject = JsonConvert.DeserializeObject<LogoListTemporal>(listaLogosExample);
+        string asdasd = "";*/
     }
     <main>
+
         <div>
-            <h1>
-                este es el titulo de ItemMenuList: @JsonViewPageObject.ItemMenuList.Title
-            </h1>
+            <NavMenu/>
         </div>
-        <div>
-            <NavMenu />
-        </div>
-        <div class="top-row px-4">
-            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
-        </div>
+        
+        
+
         <div>
             <Carousel />
         </div>
         <div>
             <Articles />
         </div>
+        <div>
+            <EndPage  />
+        </div>
+     
+        <!--
+            <div class="top-row px-4">
+            <a href="https://docs.microsoft.com/aspnet/" target="_blank">About</a>
+        </div>
+        
        
         
-        <div>
-            <EndPage />
-        </div>
+        -->
         
     </main>
 </div>

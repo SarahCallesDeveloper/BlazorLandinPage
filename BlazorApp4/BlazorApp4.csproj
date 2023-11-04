@@ -7,6 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="NewFolder\Interface\**" />
+    <Content Remove="NewFolder\Interface\**" />
+    <EmbeddedResource Remove="NewFolder\Interface\**" />
+    <None Remove="NewFolder\Interface\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="pview.json" />
   </ItemGroup>
 

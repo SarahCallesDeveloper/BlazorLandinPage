@@ -1,4 +1,5 @@
-﻿using BlazorApp4.NewFolder.Interface;
+﻿
+using BlazorApp4.NewFolder.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,11 @@ using System.Threading.Tasks;
 
 namespace BlazorApp4.NewFolder.Implementation
 {
-    public class ItemMenuList : ItemBase
+    [Serializable]
+    public class ItemMenuList : IItemBase
     {
-        public List<ItemBase> Items { get; set; }
+        public List<IItemBase> Items { get; set; }
+        public string Title { get; set; }
+        public string? ImageSource { get; set; }
     }
 }

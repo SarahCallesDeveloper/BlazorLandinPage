@@ -1,13 +1,30 @@
 ﻿@using BlazorApp4.NewFolder.Implementation;
 
 
-
-
-@createMarkupString(returnsHtmlArticle(returnsArticlesList()))
-
+<div class='d-flex flex-wrap justify-content-evenly'>
+    @foreach (var article in returnsArticlesList())
+    {
+        <div class='d-flex flex-column border-0 p-3 m-2' style='width: 220px;'>
+            <div class='d-flex justify-content-center border-0 pb-0' style='font-size: 16px; color: black;'>
+                <strong>@article.Title</strong>
+            </div>
+            <div class='d-flex justify-content-center border-0 pb-0 pt-' style='font-size: 12px; color: black; font-style: italic;'>
+                <q>@article.Quote</q>
+            </div>
+            <img src='@article.ImageSource' style='width: 100%; height: auto;' alt=''>
+            <div class='overflow-auto' style='color: black; font-size: 12px;'>
+                @article.Description
+            </div>
+        </div>
+    }
+</div>
 
 
 @code {
+
+    [Parameter]
+    public List<Article> articlesList { get; set; }
+
     MarkupString createMarkupString(string html)
     {
         MarkupString markupString = new MarkupString(html);
