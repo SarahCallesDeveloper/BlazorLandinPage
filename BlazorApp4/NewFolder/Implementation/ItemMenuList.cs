@@ -1,5 +1,7 @@
 ﻿
 using BlazorApp4.NewFolder.Interfaces;
+using BlazorApp4.NewFolder.JsonObject;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +11,7 @@ using System.Threading.Tasks;
 namespace BlazorApp4.NewFolder.Implementation
 {
     [Serializable]
+    [JsonConverter(typeof(IItemBaseConverter))]
     public class ItemMenuList : IItemBase
     {
         public List<IItemBase> Items { get; set; }

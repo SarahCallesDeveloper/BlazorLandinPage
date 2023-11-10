@@ -12,23 +12,24 @@
 <div class="page">
    
     @{
-        /*string listaLogosExample = File.ReadAllText(@"./wwwroot/ExampleLogoAndUrlList.json"); ;
+       string listaLogosExample = File.ReadAllText(@"./wwwroot/ExampleLogoAndUrlList.json"); ;
         string jsonString = File.ReadAllText(@"./wwwroot/pview.json");
 
         var settings = new JsonSerializerSettings();
-        settings.Converters.Add(new ItemBaseConverter());
+        /* settings.Converters.Add(new JsonTypeConverter());*/
+       
         settings.NullValueHandling = NullValueHandling.Ignore;
 
         var JsonViewPageObject = JsonConvert.DeserializeObject<JsonViewPage>(jsonString, settings);
         var JsonlistaLogosExampleObject = JsonConvert.DeserializeObject<LogoListTemporal>(listaLogosExample);
-        string asdasd = "";*/
+        string asdasd = "";
     }
     <main>
 
-        <div>
-            <NavMenu/>
+        <!-- <div>
+            <NavMenu ItemMenuList=JsonViewPageObject.ItemMenuList />
         </div>
-        
+         -->
         
 
         <div>
@@ -38,7 +39,7 @@
             <Articles />
         </div>
         <div>
-            <EndPage  />
+            <EndPage listaDeLogos=JsonlistaLogosExampleObject />
         </div>
      
         <!--
