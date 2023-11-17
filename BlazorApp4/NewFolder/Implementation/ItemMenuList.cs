@@ -14,8 +14,10 @@ namespace BlazorApp4.NewFolder.Implementation
     [JsonConverter(typeof(IItemBaseConverter))]
     public class ItemMenuList : IItemBase
     {
+        [JsonConverter(typeof(IItemBaseListConverter))]
         public List<IItemBase> Items { get; set; }
         public string Title { get; set; }
         public string? ImageSource { get; set; }
+        public string ItemBaseType { get; set; }
     }
 }

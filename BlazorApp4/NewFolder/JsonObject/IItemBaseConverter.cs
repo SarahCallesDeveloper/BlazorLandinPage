@@ -10,19 +10,19 @@ namespace BlazorApp4.NewFolder.JsonObject
     {
         public override IItemBase Create(Type ObjectType, JObject JObject)
         {
-            var items = JObject.Value<string>("items");
+            var items = JObject.Value<string>("ItemBaseType");
             switch (items)
             {
                 case ConstantsObject.ITEMTITLE:
                     return new ItemTitle();
                 case ConstantsObject.ITEMURL:
                     return new ItemUrl();
-                case ConstantsObject.ITEMDESCRIPTION: 
+                case ConstantsObject.ITEMDESCRIPTION:
                     return new ItemDescription();
-                case ConstantsObject.ITEMMENULIST: 
+                case ConstantsObject.ITEMMENULIST:
                     return new ItemMenuList();
                 default:
-                    return new ItemTitle();
+                    throw new InvalidOperationException($"Unsupported ItemBaseType:");
             }
         }
     }

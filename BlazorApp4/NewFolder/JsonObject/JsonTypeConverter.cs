@@ -18,11 +18,12 @@ namespace BlazorApp4.NewFolder.JsonObject
             return typeof(T).IsAssignableFrom(ObjectType);/* typeToConvert == typeof(IItemBase);*/
         }
 
-        public override object ReadJson(JsonReader reader, Type typeToConvert, object existingValue, JsonSerializer serializer)
+        public override object ReadJson( JsonReader reader, Type typeToConvert, object existingValue, JsonSerializer serializer)
         {
             if (reader.TokenType==null) {
                 return null;
             };
+
             JObject JObject = JObject.Load(reader);
             //Target type == child objecto or end object
             T target = Create(typeToConvert, JObject);

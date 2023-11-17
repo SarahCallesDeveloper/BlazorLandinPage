@@ -1,46 +1,25 @@
 {
   "ItemMenuList": {
+    "ItemBaseType": "ItemMenuList",
     "Items": [
       {
         "Title": "PrimeraVuelta",
-        "ImageSource": "asdasd"
+        "ImageSource": "InstagramLogopath",
+        "ItemBaseType": "ItemTitle"
       },
       {
-        "Title": "PrimeraVuelta"
+        "Title": "PrimeraVuelta",
+        "ItemBaseType": "ItemTitle"
       },
       {
         "Title": "Descripcion",
-        "Description": "esta es la descripcion"
+        "Description": "esta es la descripcion",
+        "ItemBaseType": "ItemDescription"
       },
       {
         "Title": "url",
-        "Url": "https://www.instagram.com/?hl=es"
-      },
-      {
-        "Title": "Menu Desplegable",
-        "Items": [
-          {
-            "Title": "urlMenu",
-            "Url": "https://www.instagram.com/?hl=es"
-          },
-          {
-            "Title": "Descripcion",
-            "Description": "esta es la descripcion"
-          },
-          {
-            "Title": "Titulo",
-            "Items": [
-              {
-                "Title": "TerceraVuelta",
-                "ImageSource": "asdasd"
-              },
-              {
-                "Title": "urlTerceraVuelta",
-                "Url": "https://www.instagram.com/?hl=es"
-              }
-            ]
-          }
-        ]
+        "Url": "https://www.instagram.com/?hl=es",
+        "ItemBaseType": "ItemUrl"
       }
     ]
   },

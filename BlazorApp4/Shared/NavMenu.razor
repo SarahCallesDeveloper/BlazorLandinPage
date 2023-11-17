@@ -73,7 +73,10 @@
                                         @itemMenuList.Title
                                     </a>
                                     <ul class="dropdown-menu">
-                                        @foreach (var Item in itemMenuList.Items)
+                                        @if (itemMenuList.Items == null) { }
+                                        else
+                                        {
+                                            foreach (var Item in itemMenuList.Items)
                                         {
                                             switch (Item)
                                             {
@@ -163,7 +166,7 @@
                                                     break;
                                             }
 
-                                        }
+                                        }}
                                     </ul>
                                 </div>
                             </li>
@@ -216,10 +219,10 @@
             ImageSource = "asdasd"
         };
 
-    ItemMenuList addsItemToMenu()
-    {
+    /*ItemMenuList addsItemToMenu()
+        {
         return new ItemMenuList()
-            {
+                {
                 Items = new List<IItemBase>() {
             new ItemTitle() {
                     Title = "PrimeraVuelta", ImageSource = "asdasd"
@@ -230,13 +233,13 @@
                 new ItemDescription() {
                     Title = "Descripcion", Description ="esta es la descripcion"
                 },
-                new ItemUrl() {
+                    new ItemUrl() {
                     Title = "url", Url = "https://www.instagram.com/?hl=es"
                 },
 
                 new ItemMenuList() {
                     Title = "Menu Desplegable", Items = new List < IItemBase > () {
-                        new ItemUrl() {
+                                new ItemUrl() {
                                 Title = "urlMenu", Url = "https://www.instagram.com/?hl=es"
                             },
                             new ItemDescription() {
@@ -246,19 +249,19 @@
                             new ItemMenuList() {
                                 Title = "Titulo", Items = new List < IItemBase > ()
 
-                                {
+                                    {
                                     new ItemTitle() {
                                             Title = "TerceraVuelta", ImageSource = "asdasd"
                                         },
-                                        new ItemUrl() {
+                                            new ItemUrl() {
                                             Title = "urlTerceraVuelta", Url = "https://www.instagram.com/?hl=es"
-                                        }
                                 }
                             }
                     }
                 }
-        }
-            };
-    }
+            }
+            }
+                };
+    }*/
 
 }
